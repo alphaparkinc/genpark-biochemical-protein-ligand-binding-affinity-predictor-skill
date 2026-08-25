@@ -1,0 +1,38 @@
+{
+  "name": "genpark-biochemical-protein-ligand-binding-affinity-predictor-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - All-atom biochemical foundation model predicting protein-ligand binding affinity, multimer conformations, and drug discovery docking.",
+  "author": "genpark",
+  "category": "biotech-ai",
+  "tags": [
+    "drug-discovery",
+    "protein-ligand",
+    "binding-affinity",
+    "molecular-docking",
+    "chai-discovery"
+  ],
+  "inputs": {
+    "target_pdb_id": {
+      "type": "string"
+    },
+    "small_molecule_smiles": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "screening_id": {
+      "type": "string"
+    },
+    "predicted_kd_binding_affinity_nm": {
+      "type": "number"
+    },
+    "docking_rmsd_angstroms": {
+      "type": "number"
+    },
+    "de_novo_small_molecule_drug_candidate_qualified": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
